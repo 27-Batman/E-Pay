@@ -1,0 +1,265 @@
+/* General Reset Section
+Reset padding, margin, and set box-sizing to border-box to ensure consistent spacing across all elements. */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes padding and borders part of the element's total width and height */
+    font-family: Arial, Helvetica, sans-serif; /* Consistent font family */
+}
+
+/* Body Section
+Make the body fill the height of the viewport, allowing for flexible content inside.
+Flexbox used for vertical alignment of content. */
+
+body {
+    background-color: white;
+    min-height: 100vh; /* Minimum height to fill the screen height */
+    display: flex;
+    flex-direction: column; /* Align children (header, main, footer) vertically */
+}
+
+/* Header Section
+Horizontal layout with space between navigation items. */
+header {
+    display: flex;
+    justify-content: flex-end; /* Align navigation items to the right */
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-bottom: 2px solid white; /* Bottom border to visually separate header */
+}
+
+/* Navigation Links Styling
+Links aligned horizontally with a pipe "|" separator between the first and second link. */
+.nav-link {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link a {
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold; /* Make links bold for better visibility */
+}
+
+.nav-link a:first-child::after {
+    content: "|"; /* Adds a pipe symbol after the first link */
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+}
+/* Hover effect for navigation links: Changes link color on hover */
+.nav-link a:hover {
+    color: orange;
+}
+
+/* Main Section Styling
+This is the main content area. Flexbox is used to create space between text and the image. */
+main {
+    flex: 1; /* Takes all available space to push footer down */
+    display: flex;
+    justify-content: space-between; /* Puts text on one side and image on the other */
+    align-items: center;
+    padding: 50px 10px;
+    min-height: calc(100vh - 120px); /* Ensures main takes most of the screen height (deducts header/footer height) */
+}
+
+/* Body Text Section Styling
+Defines the styling for the headings, paragraphs, and CTA button. */
+.body-text-section {
+    max-width: 800px; /* Limit the text width for readability */
+}
+
+.body-text-section h1 {
+    font-size: 58px; /* Large font for main heading */
+    font-weight: bold;
+    color: #06c; /* Bright blue color for the heading */
+    margin-left: 150px; /* Creates left space for aesthetic alignment */
+    margin-bottom: 20px;
+}
+
+.body-text-section h2 {
+    font-size: 36px; /* Smaller font size for subheading */
+    color: #007bff;
+    line-height: 1.2;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+
+.body-text-section p {
+    font-size: 20px; /* Slightly larger than default text size for better readability */
+    color: #555;
+    line-height: 1.4;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+
+/* Call-to-Action Button Styling
+Defines a large, clickable button with a hover effect to encourage user interaction. */
+.cta-button {
+    padding: 10px 20px;
+    background-color: #333; /* Dark background for strong contrast */
+    color: white;
+    text-decoration: none;
+    border-radius: 10px; /* Rounded corners for a modern look */
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: 150px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease; /* Smooth transition when hovering */
+}
+
+.cta-button:hover {
+    background-color: orange; /* Change button color on hover to grab attention */
+}
+
+/* Image Section Styling
+Image placed in the right section of the main area, scales responsively. */
+.image-section {
+    max-width: 600px;
+    display: flex;
+    justify-content: center; /* Center-aligns the image horizontally */
+    margin-right: 130px;
+    align-items: center;
+}
+
+.image-section img {
+    max-width: 100%; /* Makes the image responsive to the screen size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Footer Section Styling
+Footer contains text and social media icons, aligned horizontally. */
+footer {
+    background-color: #333; /* Dark footer for strong visual separation from content */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Footer Content Styling
+Flexbox is used to align the footer's text and icons. */
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Spreads out footer content evenly */
+    align-items: center;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    padding: 20px 10px;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+.footer-content ul {
+    list-style: none; /* Removes default list styling */
+    display: flex; /* Horizontal layout for list items */
+}
+
+.footer-content ul li {
+    margin: 0 10px; /* Adds space between list items */
+}
+
+.footer-content ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-content ul li a:hover {
+    color: orange; /* Change color on hover for visual feedback */
+}
+
+/* Social Media Icons Styling
+Icons displayed next to each other with a small gap between them. */
+.icons {
+    margin: 0 10px;
+    display: flex;
+    gap: 15px; /* Adds space between the icons */
+}
+
+.icons img {
+    width: 25px;
+    height: 25px; /* Set a fixed size for icons */
+}
+
+/* Responsive Design Section, Media queries for screen size adjustments: Adjusting layout and font size based on screen width. */
+
+/* Tablet and Medium-sized Screens (1024px and below) */
+@media (max-width: 1024px) {
+    main {
+        padding: 20px; /* Less padding for smaller screens */
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .body-text-section h1, .body-text-section h2, .body-text-section p, .cta-button {
+        margin-left: 0; /* Remove left margin for centering */
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .image-section {
+        margin-right: 0;
+        margin-top: 20px; /* Adds space between text and image */
+    }
+
+    .image-section img {
+        max-width: 500px; /* Reduce image size for medium screens */
+    }
+}
+
+/* Mobile Screens (768px and below) */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center;
+    }
+
+    .body-text-section h1 {
+        font-size: 48px; /* Reduce heading size for small screens */
+    }
+
+    .body-text-section h2 {
+        font-size: 28px; /* Reduce subheading size */
+    }
+
+    .cta-button {
+        margin-top: 20px;
+    }
+
+    .image-section img {
+        max-width: 300px; /* Reduce image size further for smaller screens */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Stack footer content vertically */
+    }
+
+    .icons {
+        margin-top: 10px; /* Adds space between icons on small screens */
+    }
+}
+
+/* Very Small Mobile Screens (480px and below) */
+@media (max-width: 480px) {
+    .body-text-section h1 {
+        font-size: 36px; /* Further reduce heading size */
+    }
+
+    .body-text-section h2 {
+        font-size: 22px;
+    }
+
+    .body-text-section p {
+        font-size: 16px; /* Smaller text for very small screens */
+    }
+
+    .cta-button {
+        font-size: 20px;
+        padding: 10px 15px; /* Smaller button for small screens */
+    }
+
+    .image-section img {
+        max-width: 200px; /* Further reduce image size */
+    }
+}
