@@ -4,19 +4,71 @@
     box-sizing: border-box;
 }
 
-body, html{
+body, html {
     height: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container{
+.container {
     background-color: #0d47a1;
     height: 100%;
     width: 100%;
     position: relative;
+    display: flex;
 }
 
-.white-shape{
+.left {
+    width: 30%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+.left h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.left h1 span {
+    font-weight: bold;
+}
+
+.left p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: orange;
+}
+
+.login-prompt {
+    margin-top: 20px;
+}
+
+.Login-prompt p {
+    color: white;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: white; 
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: orange;
+}
+
+.white-shape {
     position: absolute;
     background-color: white;
     width: 70%;
