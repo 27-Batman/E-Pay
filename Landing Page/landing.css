@@ -57,12 +57,12 @@ Links aligned horizontally with a pipe "|" separator between the first and secon
 /* Main Section Styling
 This is the main content area. Flexbox is used to create space between text and the image. */
 main {
-    flex: 1; /* Takes all available space to push footer down */
+    flex-grow: 1; /* Takes all available space to push footer down */
     display: flex;
     justify-content: space-between; /* Puts text on one side and image on the other */
     align-items: center;
     padding: 50px 10px;
-    min-height: calc(100vh - 120px); /* Ensures main takes most of the screen height (deducts header/footer height) */
+    min-height: calc(100vh - 65px); /* Ensures main takes most of the screen height (deducts header/footer height) */
 }
 
 /* Body Text Section Styling
@@ -136,6 +136,8 @@ footer {
     color: white;
     padding: 20px 0;
     text-align: center;
+    margin-top: auto;
+    width: 100%;
 }
 
 /* Footer Content Styling
