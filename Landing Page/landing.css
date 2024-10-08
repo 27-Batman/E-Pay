@@ -74,9 +74,13 @@ Defines the styling for the headings, paragraphs, and CTA button. */
 .body-text-section h1 {
     font-size: 58px; /* Large font for main heading */
     font-weight: bold;
-    color: #06c; /* Bright blue color for the heading */
+    color: #0D47A1; /* Bright blue color for the heading */
     margin-left: 150px; /* Creates left space for aesthetic alignment */
     margin-bottom: 20px;
+}
+
+.body-text-section h1 span {
+    color: #0066CC;
 }
 
 .body-text-section h2 {
