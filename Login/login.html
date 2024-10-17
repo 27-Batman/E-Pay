@@ -4,11 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Pay | Login</title>
+    <link rel="icon" type="image/png" href="../Icon.png">
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="login-container">
-        <div class="login-box"></div>
+        <div class="login-box">
+        <div class="logo-container">
+            <img src="../Icon.png" alt="logo" class="logo">
+            <h1>E-<span>Pay</span></h1>
+        </div>
+        <form action="#">
+            <div class="Input">
+                <label for="username">Username</label>
+                <input type="email" name="username" placeholder="Enter your E-mail" required>
+            </div>
+            <div class="Input">
+                <label for="password">Pasword</label>
+                <input type="passsword" name="password" placeholder="Enter your Password" required>
+            </div>
+            <button type="submit" class="login-btn">Log In</button>
+        </form>
+        <div class="forgot-password">
+            <a href="#">Forgot Password</a>
+        </div>
+        <div class="register-link">
+            <p>New to E-Pay? <a href="../Registration/register.html">Register Now</a></p>
+        </div>
     </div>
 </body>
 </html>
