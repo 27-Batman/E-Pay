@@ -21,7 +21,10 @@
                 </div>
                 <div class="input">
                     <label for="password">Password</label>
-                    <input type="password" name="password" placeholder="Enter your password" required>
+                    <div class="password-container">
+                        <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                        <span class="toggle-password" onclick="togglePassword()">🙈</span>
+                    </div>
                 </div>
                 <button type="submit" class="login-btn">Log In</button>
             </form>
@@ -33,5 +36,19 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var icon = document.querySelector(".toggle-password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                icon.textContent = "👀";
+            } else {
+                passwordField.type = "password";
+                icon.textContent = "🙈";
+            }
+        }
+    </script>
 </body>
 </html>

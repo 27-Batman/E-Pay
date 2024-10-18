@@ -64,10 +64,29 @@ label {
 input {
     width: 100%;
     padding: 10px;
-    padding-right: 40px;
     margin-top: 5px;
     border: 1px solid black;
     border-radius: 5px;
+}
+
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 40px; 
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
 }
 
 button.login-btn {
@@ -82,7 +101,7 @@ button.login-btn {
 }
 
 button.login-btn:hover {
-    background-color: orange; 
+    background-color: orange;
 }
 
 .Forgot-password {
@@ -110,27 +129,27 @@ button.login-btn:hover {
     }
 
     h1 {
-        font-size: 30px; 
+        font-size: 30px;
     }
 }
 
 @media (max-width: 768px) {
     .login-box {
-        width: 300px; 
+        width: 300px;
         padding: 20px;
     }
 
     h1 {
-        font-size: 28px; 
+        font-size: 28px;
     }
 
     input {
-        padding: 8px; 
+        padding: 8px;
     }
 
     button.login-btn {
-        font-size: 14px; 
-        padding: 8px; 
+        font-size: 14px;
+        padding: 8px;
     }
 }
 
@@ -141,15 +160,15 @@ button.login-btn:hover {
     }
 
     h1 {
-        font-size: 24px; 
+        font-size: 24px;
     }
 
     input {
-        padding: 6px; 
+        padding: 6px;
     }
 
     button.login-btn {
-        font-size: 12px; 
-        padding: 6px; 
+        font-size: 12px;
+        padding: 6px;
     }
 }
