@@ -25,7 +25,7 @@ header {
     justify-content: flex-end; /* Align navigation items to the right */
     align-items: center;
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #0D47A1;
     border-bottom: 2px solid white; /* Bottom border to visually separate header */
 }
 
@@ -39,7 +39,7 @@ Links aligned horizontally with a pipe "|" separator between the first and secon
 .nav-link a {
     font-size: 24px;
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold; /* Make links bold for better visibility */
 }
 
@@ -47,7 +47,7 @@ Links aligned horizontally with a pipe "|" separator between the first and secon
     content: "|"; /* Adds a pipe symbol after the first link */
     margin-left: 10px;
     margin-right: 10px;
-    color: black;
+    color: whitesmoke;
 }
 /* Hover effect for navigation links: Changes link color on hover */
 .nav-link a:hover {
