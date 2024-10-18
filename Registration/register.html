@@ -40,13 +40,15 @@
                     <input type="text" placeholder="Customer ID *" required>
                 </div>
                 <div class="passw">
-                    <input type="password" placeholder="SC.No *" required>
+                    <input type="password" id="password" placeholder="Password *" required>
+                    <span class="toggle-password" onclick="togglePassword()">🙈</span>
                 </div>
                 <div class="sc">
                     <input type="text" placeholder="Password *" required>
                 </div>
                 <div class="confirm">
-                    <input type="password" placeholder="Confirm Password" required>
+                    <input type="password" id="confirm-password" placeholder="Confirm Password *" required>
+                    <span class="toggle-password" onclick="toggleConfirmPassword()">🙈</span>
                 </div>
                 <div class="gender-group">
                     <label>
@@ -62,5 +64,33 @@
             </form>
         </div>
     </div>
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var toggleBtn = passwordField.nextElementSibling;
+        
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                toggleBtn.textContent = "👀"; 
+            } else {
+                passwordField.type = "password";
+                toggleBtn.textContent = "🙈"; 
+            }
+        }
+        
+        function toggleConfirmPassword() {
+            var confirmPasswordField = document.getElementById("confirm-password");
+            var toggleBtn = confirmPasswordField.nextElementSibling;
+        
+            if (confirmPasswordField.type === "password") {
+                confirmPasswordField.type = "text";
+                toggleBtn.textContent = "👀"; 
+            } else {
+                confirmPasswordField.type = "password";
+                toggleBtn.textContent = "🙈"; 
+            }
+        }
+    </script>
 </body>
 </html>

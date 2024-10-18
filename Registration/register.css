@@ -54,6 +54,18 @@ body, html {
     color: white;
 }
 
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}
+.passw, .confirm {
+    position: relative;
+}
+
 .cta-button {
     padding: 10px 20px;
     background-color: white; 
