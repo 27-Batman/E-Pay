@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E6E6E6;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Header {
+    display: flex;
+    background-color: #0D47A1;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+}
+
+.welcome-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.Dashboard {
+    padding: 20px;
+}
+
+.Dashboard h2 {
+    font-size: 28px;
+    color: #06c;
+    margin-bottom: 10px; 
+}
+
+.Dashboard-line {
+    display: flex;
+    background-color: #06c;
+    padding: 1.5px 20px;
+}
+
+.due-payment {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 12px 14px 22px rgba(0, 0, 0, 0);   
+}
+
+.due-payment h3 {
+    color: #06c;
+    margin-top: -13px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.customer-info p {
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.customer-info p span {
+    font-weight: 200;
+    margin-left: 1px;
+    text-decoration: wavy;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.payment-table th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.payment-table td {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.payment-table thead {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.pay-now {
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: -20px;
+    margin-left: 92%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pay-now:hover {
+  background-color: orange;
+}
+
+.bill-history {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 12px 14px 22px rgba(0, 0, 0, 0);   
+}
+
+.bill-history h3 {
+    color: #0066cc;
+    margin-top: -10px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.history-table th {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.history-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.history-table thead {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.history-table a {
+  color: #1e88e5;
+  text-decoration: none;
+}
+
+.history-table a:hover {
+  text-decoration: underline;
+}
