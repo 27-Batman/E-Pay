@@ -24,7 +24,7 @@ header {
     display: flex;
     justify-content: flex-end; /* Align navigation items to the right */
     align-items: center;
-    padding: 20px;
+    padding: 25px;
     background-color: #0D47A1;
     border-bottom: 2px solid white; /* Bottom border to visually separate header */
 }
