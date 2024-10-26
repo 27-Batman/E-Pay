@@ -6,14 +6,15 @@
 
 body {
     background-color: #E6E6E6;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    color: #333;
 }
 
 .Header {
     display: flex;
     background-color: #0D47A1;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 11px 20px;
     align-items: center;
 }
 
@@ -30,39 +31,43 @@ body {
     color: white;
 }
 
+.welcome-text span {
+    font-style: italic;
+}
+
 .Dashboard {
     padding: 20px;
 }
 
 .Dashboard h2 {
-    font-size: 28px;
+    font-size: 30px;
     color: #06c;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .Dashboard-line {
-    display: flex;
+    height: 3px;
     background-color: #06c;
-    padding: 1.5px 20px;
+    margin-bottom: 20px;
 }
 
-.due-payment {
-    background-color: white;
-    padding: 20px;
+.due-payment, .bill-history {
+    background-color: #fff;
+    padding: 25px;
     margin-top: 20px;
     border-radius: 12px;
-    box-shadow: 12px 14px 22px rgba(0, 0, 0, 0);   
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.due-payment h3 {
+.due-payment h3, .bill-history h3 {
+    font-size: 22px;
     color: #06c;
     margin-top: -13px;
-    margin-bottom: 8px;
-    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .customer-info p {
-    margin-bottom: 2px;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
@@ -78,82 +83,134 @@ table {
     margin-top: 15px;
 }
 
-.payment-table th {
+.payment-table th, .history-table th {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
     font-size: 16px;
 }
 
-.payment-table td {
+.payment-table td, .history-table td {
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
     font-size: 16px;
 }
 
-.payment-table thead {
-    background-color: #e0e0e0;
-    color: #333;
-}
-
 .pay-now {
-    background-color: #4caf50;
+    background-color: #388E3C;
     color: white;
     font-weight: bold;
     border: none;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: -20px;
+    margin-top: 15px;
     margin-left: 92%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
-.pay-now:hover {
-  background-color: orange;
-}
-
-.bill-history {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 12px;
-    box-shadow: 12px 14px 22px rgba(0, 0, 0, 0);   
-}
-
-.bill-history h3 {
-    color: #0066cc;
-    margin-top: -10px;
-    margin-bottom: 8px;
-    font-size: 20px;
-}
-
-.history-table th {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-}
-
-.history-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-}
-
-.history-table thead {
+.payment-table thead, .history-table thead {
     background-color: #e0e0e0;
     color: #333;
 }
 
+.pay-now:hover {
+    background-color: orange;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.view-details {
+    color: #1e88e5;
+    text-decoration: none;
+}
+
+.view-details:hover {
+    text-decoration: underline;
+}
+
 .history-table a {
-  color: #1e88e5;
-  text-decoration: none;
+    color: #1e88e5;
 }
 
 .history-table a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+    .welcome-text {
+        font-size: 20px;
+    }
+
+    .Dashboard h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .welcome-text {
+        font-size: 18px;
+    }
+
+    .Dashboard {
+        padding: 15px;
+    }
+
+    .Dashboard h2 {
+        font-size: 24px;
+    }
+
+    .due-payment, .bill-history {
+        padding: 15px;
+    }
+
+    .pay-now {
+        float: none;
+        width: 100%;
+        margin: 15px 0;
+        padding: 12px 0;
+    }
+    
+    table th, table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-text {
+        font-size: 16px;
+    }
+
+    .Dashboard h2 {
+        font-size: 22px;
+    }
+
+    .due-payment h3, .bill-history h3 {
+        font-size: 18px;
+    }
+
+    .customer-info p {
+        font-size: 14px;
+    }
+
+    table th, table td {
+        font-size: 12px;
+    }
+
+    .pay-now {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
