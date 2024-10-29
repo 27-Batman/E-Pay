@@ -1,3 +1,18 @@
+function filterOptions() {
+    const input = document.getElementById("counter-search").value.toLowerCase();
+    const select = document.getElementById("select-state");
+    const options = select.getElementsByTagName("option");
+
+    for (let i = 0; i < options.length; i++) {
+        const optionText = options[i].text.toLowerCase();
+        if (optionText.includes(input)) {
+            options[i].style.display = "";
+        } else {
+            options[i].style.display = "none";
+        }
+    }
+}
+
 function togglePassword() {
     var passwordField = document.getElementById("password");
     var toggleBtn = passwordField.nextElementSibling;
