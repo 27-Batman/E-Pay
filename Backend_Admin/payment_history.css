@@ -1,0 +1,166 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Header */
+.header {
+    background-color: #1e3a8a; /* Darker blue */
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #3498db;
+}
+
+.welcome {
+    font-size: 18px;
+}
+
+.logout {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+    background-color: #c0392b;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background-color: #1f4cc6; /* Darker background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 70px;
+    transition: width 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #34495e;
+}
+
+.sidebar ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+    background-color:#1f4cc6;
+}
+
+/* Content Section */
+.content {
+    margin-left: 240px; /* Adjusted to match new sidebar width */
+    padding: 30px;
+    transition: margin-left 0.3s ease;
+}
+
+h2 {
+    color: #333;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* User Details */
+.user-details {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(45, 11, 196, 0.1);
+}
+
+.user-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Payment History Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(40, 29, 163, 0.1);
+    border-radius: 5px;
+}
+
+thead {
+    background-color: #1f4cc6;
+    color: white;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+tbody tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .sidebar ul li {
+        display: inline-block;
+        padding: 12px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logout {
+        margin-top: 15px;
+    }
+}

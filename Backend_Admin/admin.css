@@ -1,0 +1,46 @@
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: #f4f4f4;
+}
+
+.add-user-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.add-user-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.add-user-form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.add-user-form button:hover {
+    background-color: #218838;
+}
+
+.success-message {
+    color: green;
+}
+
+.error-message {
+    color: red;
+}

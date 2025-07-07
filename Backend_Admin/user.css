@@ -1,0 +1,55 @@
+.search-form {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-results {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.user-table th, .user-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.user-table th {
+    background-color: #f4f4f4;
+}
+
+.no-results {
+    text-align: center;
+    color: red;
+    margin-top: 20px;
+}
+
+.log-out {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
